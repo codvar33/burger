@@ -1,0 +1,59 @@
+<div class="container bg">
+	<div class="row">
+	    <div class="center col-sm-12">
+			<img src="https://www.chatelaine.com/wp-content/uploads/2017/05/Bibimbap-homemade-burgers.jpg" style="margin-top:20px;width:400px;height:400px;" alt="Joes Custom Burger App">
+	        <h1>Welcome to Burger Barn</h1>
+            <span>Home of your favorite Burger!</span>
+	        <p></p>
+	    </div>
+  	</div>
+	<div class="row">
+	    <div class="col-sm-6">
+			<h2>Custom Burgers Ready To Eat!</h2>
+			<hr>
+			<ul>
+			  {{#each burgers}}
+			    {{#unless this.devoured}}
+			      <li>
+			      	Burger ID #: {{this.id}}
+                      <br> 
+			        Burger Name: {{this.burger_name}}
+			        <form action="/{{this.id}}?_method=PUT" method="POST">
+			          <input type="hidden" name="devoured" value="true">
+                      <hr>
+			          <button class="btn-primary" type="submit">Eat!</button>
+			        </form>
+			      </li>
+			    {{/unless}}
+			  {{/each}}
+			</ul>
+			<hr>
+	    </div>
+	    <div class="col-sm-6">
+			<h2>Burger Request History</h2>
+			<hr>
+			  {{#each burgers}}
+			    {{#if this.devoured}}
+			      <li>
+			      	Burger ID #: {{this.id}}
+              <br>
+			        Burger Name: {{this.burger_name}}
+			      </li>
+			    {{/if}}
+			  {{/each}}
+				<hr>
+	    </div>
+  	</div>
+	<div class="row">
+	    <div class="center col-sm-12">
+			<h2>Request a custom Burger</h2>
+			<form class="create-update-form" action="/" method="POST">
+			  <div class="form-group">
+			    <p>Type in a burger that you want to see made and hit Submit</p>
+			    <input type="text" id="ca" name="burger_name">
+			  </div>
+			  <button class="btn-primary" type="submit">Submit</button>
+			</form>
+	    </div>
+  	</div>
+</div>

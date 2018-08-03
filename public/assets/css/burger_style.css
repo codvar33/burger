@@ -1,0 +1,68 @@
+li {
+    padding: 15px;
+    margin: 15px;
+    background: #ffffff;
+    list-style: none;
+}
+  
+  html, body{
+      height: 100%;
+}
+  body { 
+      background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/16/74/0458259b5038706.jpg);
+      background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+}
+.label {
+    font-weight: bold;
+  }
+
+.center {
+	text-align: center;
+}
+
+.right {
+	align-content: right;
+}
+
+img {
+	align-content: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+.create-update-form {
+    padding: 25px;
+    margin: 25px;
+    background: #eceff1;
+    border: 1px black solid;
+}
+.form-group {
+    margin-bottom: 25px;
+  }
+.footer {
+	text-align: center;
+}
+
+.wrapper {
+	height: 100%; 
+	width: 100%; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #000;
+    opacity: 0.6;
+}
+
+ul {
+    padding-left:0px;
+}
